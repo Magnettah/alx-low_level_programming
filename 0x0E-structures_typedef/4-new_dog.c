@@ -2,6 +2,32 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+
+/**
+ * _strdup - duplicates string
+ * @str: the steing to be duplicated
+ * Return: pointer to the dup or NULL if it fails
+ */
+char *_strdup(char *str)
+{
+	char *dup;
+	int i, length = 0;
+
+	if (str == NULL)
+		return (NULL);
+	while (str[length])
+		length++;
+
+	dup = malloc(sizeof(char) * (length + 1));
+
+	if (dup == NULL)
+		return (NULL);
+	for (i = 0; i < length; i++)
+		dup[i] = str[i];
+
+	dup[i] = '\0';
+	return (dup);
+}
 /**
  * new_dog - A function that creates new dog
  * @name: The name of the new dog
