@@ -9,10 +9,10 @@
 
 void print_all(const char * const format, ...)
 {
-	va_list anything;
 	unsigned int i = 0;
-	char *separator = "";
-	char *strg;
+	char *strg, *separator = "";
+
+	va_list anything;
 
 	va_start(anything, format);
 
