@@ -9,12 +9,12 @@
 
 void print_all(const char * const format, ...)
 {
+	va_list anything;
 	int i = 0, k = 0;
 	char *strg, *separator = ", ";
 
-	va_list anything;
-
 	va_start(anything, format);
+
 	while (format && format[i])
 		i++;
 
@@ -24,7 +24,6 @@ void print_all(const char * const format, ...)
 		{
 			separator = "";
 		}
-
 		switch (format[k])
 		{
 			case 'c':
